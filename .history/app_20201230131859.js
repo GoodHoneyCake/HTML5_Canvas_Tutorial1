@@ -1,5 +1,3 @@
-import { Ball } from "./ball.js";
-
 class App {
   constructor() {
     this.canvas = document.createElement("canvas");
