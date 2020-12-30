@@ -5,10 +5,9 @@ class App {
 
     document.body.appendChild(this.canvas);
 
-    window.addEventListener("resize", this.resize.bind(this), false);
+    window.addEventListener("resize", this.resize, false);
     this.resize();
-
-    window.requestAnimationFrame(this.animate.bind(this));
+    console.log(this.resize());
   }
 
   resize() {
