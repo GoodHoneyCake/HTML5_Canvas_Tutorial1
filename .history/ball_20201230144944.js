@@ -52,14 +52,6 @@ export class Ball {
       const min1 = Math.min(x1, x2);
       const min2 = Math.min(y1, y2);
       const min = Math.min(min1, min2);
-
-      if (min == min1) {
-        this.vx *= -1;
-        this.x += this.vx;
-      } else if (min == min2) {
-        this.vy *= -1;
-        this.y += this.vy;
-      }
     }
   }
 }
