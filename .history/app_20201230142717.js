@@ -1,5 +1,4 @@
 import { Ball } from "./ball.js";
-import { Block } from "./block.js";
 
 class App {
   constructor() {
@@ -11,8 +10,7 @@ class App {
     window.addEventListener("resize", this.resize.bind(this), false);
     this.resize();
 
-    this.ball = new Ball(this.stageWidth, this.stageHeight, 60, 5);
-    this.block = new Block(700, 30, 300, 450);
+    this.ball = new Ball(this.stageWidth, this.stageHeight, 60, 10);
 
     window.requestAnimationFrame(this.animate.bind(this));
   }
@@ -30,7 +28,7 @@ class App {
     window.requestAnimationFrame(this.animate.bind(this));
 
     this.ctx.clearRect(0, 0, this.stageWidth, this.stageWidth);
-    this.block.draw(this.ctx);
+
     this.ball.draw(this.ctx, this.stageWidth, this.stageHeight);
   }
 }
